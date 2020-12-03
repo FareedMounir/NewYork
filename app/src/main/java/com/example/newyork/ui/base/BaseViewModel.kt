@@ -16,6 +16,7 @@ open class BaseViewModel : ViewModel() {
 
     fun stopLoading() {
         _loadingVisibility.value = false
+
     }
 
 }

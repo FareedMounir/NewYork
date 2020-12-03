@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">New York</string>
     <string name="show_loading">Loading…</string>
-    <string name="published">Published</string>
-    <string name="updated">Updated</string>
+    <string name="published">Published %s</string>
+    <string name="updated">Updated %s</string>
     <string name="new_york_times_most_popular">NY Times Most Popular</string>
     <string name="article_details">Article Details</string>
 </resources>

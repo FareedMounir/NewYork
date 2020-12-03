@@ -8,6 +8,10 @@
         <variable
             name="viewModel"
             type="com.example.newyork.ui.most_popular.article_details.ArticleDetailsViewModel" />
+
+        <variable
+            name="article"
+            type="com.example.newyork.data.models.MostPopularModel" />
     </data>
 
     <ScrollView
@@ -45,6 +49,7 @@
                 android:id="@+id/title_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="@{article.title}"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/end_guideline"
@@ -57,6 +62,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:text="@{article.section}"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/end_guideline"
                 app:layout_constraintStart_toStartOf="@+id/begin_guideline"
@@ -68,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:text="@{article.byline}"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/begin_guideline"
@@ -79,6 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:text="@{@string/published(article.publishedDate)}"
                 app:layout_constraintStart_toStartOf="@+id/begin_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/author_tv"
                 tools:text="Published Nov. 28, 2020" />
@@ -87,6 +95,7 @@
                 android:id="@+id/updated_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{@string/updated(article.updated)}"
                 app:layout_constraintBaseline_toBaselineOf="@+id/published_tv"
                 app:layout_constraintEnd_toStartOf="@+id/end_guideline"
                 tools:text="Updated Dec. 1, 2020" />

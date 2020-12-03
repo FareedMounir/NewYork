@@ -9,7 +9,7 @@
 
 ## Installation
 * Clone this repository and import into Android Studio<br>
-  `git clone git@github.com:unifarid/new_york.git`
+  `git clone https://github.com/unifarid/NewYork.git`
 
 ## Generating signed APK
 From Android Studio:

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_most_popular"
+    app:startDestination="@id/mostPopularFragment">
+
+    <fragment
+        android:id="@+id/mostPopularFragment"
+        tools:layout="@layout/fragment_most_popular"
+        android:name="com.example.newyork.ui.most_popular.most_popular.MostPopularFragment"
+        android:label="@string/new_york_times_most_popular" >
+        <action
+            android:id="@+id/action_mostPopularFragment_to_articleDetails"
+            app:destination="@id/articleDetails"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetails"
+        android:name="com.example.newyork.ui.most_popular.article_details.ArticleDetailsFragment"
+        android:label="@string/article_details"
+        tools:layout="@layout/fragment_article_details" >
+        <argument
+            android:name="MostPopular"
+            app:argType="com.example.newyork.data.models.MostPopularModel" />
+    </fragment>
+</navigation>

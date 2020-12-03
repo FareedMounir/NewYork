@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.newyork.ui.most_popular.article_details.ArticleDetailsViewModel" />
+    </data>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.most_popular.article_details.ArticleDetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/begin_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cover_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/cover_iv"
+                tools:text="That Mysterious Monolith in the Utah Desert? It’s Gone, Officials Say" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/abstract_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/title_tv"
+                tools:text="The metal structure has been removed, Utah officials said on Saturday, adding that they had not taken it down." />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/author_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/abstract_tv"
+                tools:text="By Bryan Pietsch" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/published_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/author_tv"
+                tools:text="Published Nov. 28, 2020" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/updated_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@+id/published_tv"
+                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                tools:text="Updated Dec. 1, 2020" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

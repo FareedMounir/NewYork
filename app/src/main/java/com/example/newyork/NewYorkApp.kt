@@ -2,7 +2,7 @@ package com.example.newyork
 
 import android.app.Application
 import com.example.newyork.di.apiModule
-import com.example.newyork.di.controllersModule
+import com.example.newyork.di.repositoriesModule
 import com.example.newyork.di.networkModule
 import com.example.newyork.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -26,7 +26,7 @@ class NewYorkApp : Application() {
                     viewModelModule,
                     networkModule,
                     apiModule,
-                    controllersModule
+                    repositoriesModule
                 )
             )
         }

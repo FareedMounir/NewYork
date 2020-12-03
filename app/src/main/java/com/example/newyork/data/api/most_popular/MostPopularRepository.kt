@@ -5,9 +5,16 @@ import com.example.newyork.data.Success
 import com.example.newyork.data.models.MostPopularResponse
 import com.example.newyork.data.Result
 
-class MostPopularController(private val mostPopularApi: MostPopularApi) {
+interface MostPopularRepository {
 
-    suspend fun getMostPopular(): Result<MostPopularResponse> {
+    suspend fun getMostPopular(): Result<MostPopularResponse>
+
+}
+
+class MostPopularRepositoryImpl(private val mostPopularApi: MostPopularApi) :
+    MostPopularRepository {
+
+    override suspend fun getMostPopular(): Result<MostPopularResponse> {
         return try {
             val response = mostPopularApi.getMostPopularAsync().await()
             Success(response)
